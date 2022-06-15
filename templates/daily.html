@@ -1,0 +1,30 @@
+{% extends "_base.html" %}
+{% block Title %}
+    Daily Cards
+{% endblock %}
+{% block Header %}
+    Daily cards
+{% endblock %}
+{% block Contents %}
+    {% if cards %}
+        <div class="row mt-2">
+            <form action="{{ url_for('daily') }}" method="POST">
+                <div class="row justify-content-between">
+                    {% for card in cards %}
+                        <div class="col-2 m-3 cards cards-interactive">
+                            <h3 class="text-center">{{ card.word }}</h3>
+                            <input type="text" class="form-control d-none" name="word" value="{{ card.word }}">
+                            <input type="text" class="text-center form-control" id='meaning' name="meaning">
+                            <label for="meaning">Enter meaning of {{ card.word }}</label>
+                            <small id="emailHelp" class="form-text text-warning text-muted"></small>
+                            <button type="submit" class="btn btn-info buttons mt-5">Try</button>
+                        </div>
+                    {% endfor %}
+                </div>
+            </form>
+        </div>
+    {% endif %}
+    <div class="row mt-5 text-center">
+<a href={{ url_for('index') }}><button type="button" class="btn btn-dark"><i class="fa fa-home" aria-hidden="true"></i>home</button></a>    </div>
+{% endblock %}
+

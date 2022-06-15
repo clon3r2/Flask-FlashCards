@@ -1,0 +1,19 @@
+{% extends "_base.html" %}
+{% block Header %} home {% endblock %}
+{% block Title %}
+    Home
+{% endblock %}
+{% block Contents %}
+    <div class="row mt-5 mb-5">
+    <div class="status mt-2">learnt words : {{ learnt_count }}</div>
+    <div class="status mt-2">learning words : {{ learning_count }}</div>
+    <div class="status mt-2">Today words : {{ daily_count }}</div>
+    </div>
+
+    <a href={{ url_for('learning_cards') }}><button type="button" class="btn btn-warning"><i class="fa fa-book" aria-hidden="true"></i> Learning Cards</button></a>
+    <a href={{ url_for('learnt_cards') }}><button type="button" class="btn btn-warning"><i class="fa fa-bookmark-o" aria-hidden="true"></i> learnt Cards</button></a>
+    <a href={{ url_for('daily') }}><button type="button" class="btn btn-warning"><i class="fa fa-calendar-check-o" aria-hidden="true"> </i>  Daily Cards</button></a>
+    <a href={{ url_for('add_card') }}><button type="button" class="btn btn-danger"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add Card</button></a>
+    <a href={{ url_for('search') }}><button type="button" class="btn btn-danger"><i class="fa fa-calendar" aria-hidden="true"></i>  Search ByDate</button></a>
+    <a href={{ url_for('logout') }}><button type="button" class="btn btn-dark"><i class="fa fa-sign-out"  aria-hidden="true"></i>  Logout</button></a>
+{% endblock %}

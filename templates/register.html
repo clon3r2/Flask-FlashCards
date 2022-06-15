@@ -1,0 +1,42 @@
+{% extends "_base.html" %}
+{% block Header %}
+    Register
+{% endblock %}
+{% block Title %}
+    Register
+{% endblock %}
+{% block Contents %}
+  <div class="row mt-5 justify-content-center">
+      <div class="col-5">
+          <form action="{{url_for('register')}}" method="POST">
+    <div class="form-group">
+        <label for="first_name">First Name</label>
+        <input type="text" class="form-control" name="first_name">
+    </div>
+    <div class="form-group">
+        <label for="last_name">Last Name</label>
+        <input type="text" class="form-control" name="last_name">
+    </div>
+    <div class="form-group">
+        <label for="username">USERNAME</label>
+        <input type="text" class="form-control" name="username">
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" class="form-control" name="phone">
+    </div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" name="email">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" name="password">
+    </div>
+      <button type="submit" class="btn mt-5 btn-dark">Sign Up</button>
+    <p class="mt-2 text-primary">or if you have an account, you can login here:  </p>
+    <a href={{ url_for('login') }}><button type="button" class="btn btn-outline-primary">Login</button></a>
+  </form>
+      </div>
+  </div>
+{% endblock %}

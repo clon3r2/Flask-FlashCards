@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap');
+
+body{
+    background: #000000;
+    background: -webkit-linear-gradient(to left, #252525, #000000);
+    background: linear-gradient(to left, #252525, #000000);
+    color: white;
+}
+
+.header{
+    font-family: 'Raleway', sans-serif;
+    opacity: 1;
+    color: #e5e5e5;
+    background: #0575E6;
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6);
+    background: linear-gradient(to right, #021B79, #0575E6);
+}
+.flash-massage-success{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight:bold;
+    background-color: rgba(35, 227, 0, 0.8);
+    box-shadow: 0 0 10px 1px #1d7e0c;
+    color : white;
+    border-radius: 22px 0;
+    padding: 6px 0;
+    -webkit-animation-duration: 4s;animation-duration: 4s;
+    -webkit-animation-fill-mode: both;animation-fill-mode: both;
+}
+.flash-massage-danger{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight:bold;
+    background-color: rgba(227, 61, 0, 0.8);
+    box-shadow: 0px 0px 10px 1px #7f2b0d;
+    color : white;
+    border-radius: 22px 0;
+    padding: 6px 0;
+    -webkit-animation-duration: 4s;animation-duration: 4s;
+    -webkit-animation-fill-mode: both;animation-fill-mode: both;
+}
+@-webkit-keyframes fadeOut {
+            0% {opacity: 1;}
+            100% {opacity: 0;}
+         }
+
+         @keyframes fadeOut {
+            0% {opacity: 1;}
+            100% {opacity: 0;}
+         }
+
+         .fadeOut {
+            -webkit-animation-name: fadeOut;
+            animation-name: fadeOut;
+         }
+
+.status{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px 0px 20px 0px;
+    padding: 5px 0 3px 20px ;
+    box-shadow: -9px -2px 21px -9px #a6a6a6 inset;
+    color: black
+}
+.status:hover{
+    background-color: black;
+    color: white;
+    box-shadow: -9px -2px 21px -9px #001881 inset
+
+}
+#header{
+    padding: 16px 0 0 0;
+}
+label{
+    color: gray;
+}
+
+.cards{
+    background: rgba(35, 35, 35, 0.5);
+    border-radius: 10px;
+    padding: 1%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    text-shadow:0px 2px 9px #000000;
+    }
+
+.buttons{
+    box-shadow:0px 0px 11px -2px #0ff;
+}
+
+.cards-interactive{
+    display:flex;
+    flex-flow: wrap row;
+    justify-content: center;
+}
+.cards-interactive input{
+    background-color: rgba(38, 38, 38, 0.3);
+    color: #c4c4c4;
+}
+
+.cards h3{
+    padding-top: 10px;
+    font-weight: bold;
+    color: #178bc9;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.cards h4{
+    font-family: BCompset;
+    color: #c9ba17;
+    font-size: 20px;
+    font-weight: bold;
+}
